@@ -1,0 +1,23 @@
+# Here are the requirements for developers.
+# It typically adds a bunch of libraries used for code kwalitee analysis and debugging.
+-r base.txt
+-r tests.txt
+
+# Code quality (most of those tools are now automatically installed by pre-commit)
+# ------------------------------------------------------------------------------
+flake8==5.0.4  # Codeformating PEP-8/Flake8 - https://github.com/PyCQA/flake8
+flake8-isort==5.0.0  # https://github.com/gforcada/flake8-isort
+flake8-debugger==4.1.2  # https://github.com/JBKahn/flake8-debugger
+black==22.10.0  # Auto codeformatter - https://github.com/psf/black
+pylint-celery==0.3  # https://github.com/PyCQA/pylint-celery
+pylint-django==2.5.3  # https://github.com/PyCQA/pylint-django
+pre-commit==2.20.0  # https://github.com/pre-commit/pre-commit
+
+# Various tools
+django-debug-toolbar==3.7.0  # https://github.com/jazzband/django-debug-toolbar
+django-extensions==3.2.1  # https://github.com/django-extensions/django-extensions
+
+# Dependency Tree
+# ------------------------------------------------------------------------------
+pipdeptree==2.3.3  # Extra top packages for requirements - https://github.com/naiquevin/pipdeptree
+pip-review==1.2.0  # Checking if packages need updates - https://github.com/jgonggrijp/pip-review

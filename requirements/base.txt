@@ -24,7 +24,7 @@ martor==1.6.14
 django-admin-sortable2==2.1.4
 django-mptt==0.14.0
 django-modeladmin-reorder==0.3.1
-django-storages==1.11.1
+django-storages==1.13.1
 boto3==1.26.13
 deepl==1.11.0
 celery_once==3.0.1

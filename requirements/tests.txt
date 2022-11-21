@@ -1,0 +1,12 @@
+-r base.txt
+
+django-stubs==1.13.0  # https://github.com/typeddjango/django-stubs
+pytest==7.2.0
+pytest-cov==4.0.0
+
+# Django
+# ------------------------------------------------------------------------------
+factory-boy==3.2.1  #https://github.com/FactoryBoy/factory_boy
+Faker==15.1.1  #https://github.com/joke2k/faker
+django-coverage-plugin==2.0.4  # https://github.com/nedbat/django_coverage_plugin
+pytest-django==4.5.2  # https://github.com/pytest-dev/pytest-django

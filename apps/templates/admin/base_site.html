@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+  <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ ENVIRONMENT_NAME }}</a></h1>
+{% endblock %}
+
+
+{% block nav-global %}{% endblock %}
+
+{% block extrastyle %}
+<style type="text/css">
+  :root {
+    --primary: {{ ENVIRONMENT_COLOR }} !important;
+    --secondary: {{ ENVIRONMENT_COLOR }} !important;
+    --header-link-color: #fff;
+  }
+
+  .login #header {
+    background-color: {{ ENVIRONMENT_COLOR }} !important;
+  }
+  .login #branding h1 {
+            font-weight: 500;
+  }
+  .login input[type=submit] {
+    background-color: {{ ENVIRONMENT_COLOR }};
+  }
+  #footer {
+    padding-bottom: 50px!important;
+  }
+  body:after {
+    display: block;
+    position: fixed;
+  margin-top: 100px;
+    bottom: 0;
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  {% if request.user.is_authenticated %}
+    content: "Version: {{ ENVIRONMENT_VERSION }}, Build: {{ ENVIRONMENT_BUILD }}";
+  {% else %}
+    content: "Version: {{ ENVIRONMENT_VERSION }}";
+  {% endif %}
+    background: {{ ENVIRONMENT_COLOR }};
+    white-space: pre-wrap;
+  }
+</style>
+{% endblock %}

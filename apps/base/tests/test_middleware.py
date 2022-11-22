@@ -28,7 +28,7 @@ class MyMiddlewareTestCase(TestCase):
             self.assertEqual(len(config), 0)
 
     def test_get_config_models_by_app_name(self):
-        config = self.mm.get_config_models_by_app_name("product")
+        config = self.mm.get_config_models_by_app_name("blog")
         if settings.ADMIN_MODEL_OVERRIDE:
             self.assertGreater(len(config), 0)
         else:
@@ -50,7 +50,7 @@ class MyMiddlewareTestCase(TestCase):
         self.assertEqual(len(config), 0)
 
     def test_get_model_dict(self):
-        config = self.mm.get_model_dict("product.Product")
+        config = self.mm.get_model_dict("blog.Blog")
         self.assertGreater(len(config), 0)
 
     def test_check_app_exists(self):

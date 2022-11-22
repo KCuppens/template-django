@@ -66,26 +66,6 @@
                 "permission"
              ],
              [
-                "add_service",
-                "services",
-                "service"
-             ],
-             [
-                "change_service",
-                "services",
-                "service"
-             ],
-             [
-                "delete_service",
-                "services",
-                "service"
-             ],
-             [
-                "view_service",
-                "services",
-                "service"
-             ],
-             [
                "add_blog",
                "blog",
                "blog"
